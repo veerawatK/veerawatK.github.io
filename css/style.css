@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 body,
 html {
     margin: 0;
     padding: 0;
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Josefin Sans', sans-serif !important;
     box-sizing: border-box;
     max-width: 100%;
     overflow-x: hidden;
@@ -13,7 +14,6 @@ html {
 
 .topic {
     color: #fff;
-    font-size: 4vw;
     font-weight: 900;
     margin: 30;
     line-height: 1em;
@@ -29,11 +29,6 @@ html {
 
 .detail_text {
     color: #fff;
-    font-size: 1.5vw;
-    font-weight: 900;
-    margin: 30;
-    margin-left: 50;
-    line-height: 1em;
 }
 
 .mySlides {display: none}
@@ -49,8 +44,8 @@ html {
   
 /* Fading animation */
 .fadepic {
-animation-name: fadepic;
-animation-duration: 1.5s;
+    animation-name: fadepic;
+    animation-duration: 1.5s;
 }
 
 @keyframes fadepic {

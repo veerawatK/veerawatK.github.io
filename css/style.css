@@ -12,6 +12,10 @@ html {
     background: linear-gradient(180deg, rgba(152,206,232,1) 0%, rgba(77,197,232,1) 4%, rgba(26,114,200,1) 95%, rgba(51,155,222,1) 100%);
 }
 
+a:hover{
+    cursor: pointer;
+}
+
 .topic {
     color: #fff;
     font-weight: 900;
@@ -49,8 +53,8 @@ html {
 }
 
 @keyframes fadepic {
-0% {opacity: .4}
-100% {opacity: 1}
+    0% {opacity: .4}
+    100% {opacity: 1}
 }
 
 

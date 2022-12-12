@@ -8,159 +8,278 @@
     <title>Veerawat's Portfolio</title>
 </head>
 <body>
-    <div class="container">
-        <h1 class="topic fade-in-left">Portfolio</h1>
-        <p style="opacity: 0.5;">(can click on the picture for more detail)</p>
-        <div class="detail_container">
-            <div class="detail">
-                <center>
-                  <h3 class="detail_text">HTML / CSS / JavaScript</h3>
-                  <h4 style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Solar Rooftop Landing Page</h4>
-                  <p>โปรเจกต์วิชา Multimedia Technology ทำร่วมกับ Greenpeace Thailand</p>
-                </center>
-                <div id="myHTMLCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#myHTMLCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a href="https://solar-rooftop-greenpeace.netlify.app/index_solar.html" target="_blank"><img src="./pics/SolarRooftop.png" class="d-block w-100" alt="Arduino Clap Timer Project"></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Solar Rooftop</h5>
-                            <p>โปรเจกต์วิชา Multimedia Technology ทำร่วมกับ Greenpeace Thailand</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button> -->
-                </div>
+  <div class="container">
+    <h1 class="topic fade-in-left">Portfolio</h1>
+    <p style="opacity: 0.5;">(can click on the picture for more detail)</p>
+    <div class="detail_container">
+      <div class="detail">
+        <center>
+          <h3 class="detail_text">HTML / CSS / JavaScript</h3>
+          <div class="d-block d-sm-none">
+            <h4 id="myHTMLCarousel-inner_expName" style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Solar Rooftop Landing Page</h4>
+            <p id="myHTMLCarousel-inner_expDesc">โปรเจกต์วิชา Multimedia Technology ทำร่วมกับ Greenpeace Thailand</p>
+          </div>
+        </center>
+        <!-- Modal -->
+        <div class="modal fade" id="solarModal" tabindex="-1" role="dialog" aria-labelledby="solarModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="solarModalLongTitle">Solar Rooftop ft. Greenpeace Thailand</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                โปรเจกต์วิชา Multimedia Technology ทำ Landing Page Website ร่วมกับ <a style="text-decoration: none; color: green;" href="https://www.facebook.com/greenpeaceseath/">Greenpeace Thailand</a> ฟื้นฟูเศรษฐกิจด้วยโซลาร์รูฟท็อป 1 ล้านหลังคาเรือน #GreenAndJustRecovery
+              </div>
+              <div class="modal-footer">
+                <a href="https://solar-rooftop-greenpeace.netlify.app/index_solar.html" target="_blank"><button type="button" class="btn btn-primary">Go to Website</button></a>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
-            <br><br>
-            <div class="detail">
-              <center>
-                <h3 class="detail_text">React Native</h3>
-                <h4 style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Road Risk Areas Notification System</h4>
-                <p>แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง</p>
-              </center>
-                <div id="myPythonCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#myPythonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a target="_blank" href="https://youtu.be/jnU9mMJX8Ws"><img src="./pics/RANS.png" class="d-block w-100" alt="..."></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Road Risk Areas Notification System</h5>
-                            <p>ระบบแจ้งเตือนจุดเสี่ยงบนท้องถนน</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button> -->
-                </div>
+          </div>
+        </div>
+        <div id="myHTMLCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myHTMLCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myHTMLCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myHTMLCarousel" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+          </div>
+          <div id="myHTMLCarousel-inner" class="carousel-inner">
+            <div class="carousel-item active" id="Solar">
+              <a data-bs-toggle="modal" data-bs-target="#solarModal"><img id="solar" src="./pics/SolarRooftop.png" class="d-block w-100" alt="Solar Rooftop Project"></a>
+              <div class="carousel-caption d-none d-sm-block">
+                  <h5>Solar Rooftop</h5>
+                  <p>Landing Page Website ft. Greenpeace Thailand</p>
+              </div>
             </div>
-            <br><br>
-            <div class="detail">
-              <center>
-                <h3 class="detail_text">Java</h3>
-                <h4 style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Bank Simulation</h4>
-                <p>การจำลองระบบธนาคารด้วยภาษา Java</p>
-              </center>
-                <div id="myPythonCarousel" class="carousel slide carousel-dark slideshow-container fadepic" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#myPythonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a target="_blank" href="https://www.youtube.com/watch?v=dJTO9O45-QU&ab_channel=Dio-en"><img src="./pics/PloiKongBank.png" class="d-block w-100" alt="..."></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Bank Simulation</h5>
-                            <p>การจำลองระบบธนาคารด้วยภาษา Java</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button> -->
-                </div>
+            <div class="carousel-item" id="Solar">
+              <a data-bs-toggle="modal" data-bs-target="#solarModal"><img id="solar" src="./pics/SolarRooftop2.png" class="d-block w-100" alt="Solar Rooftop Project"></a>
             </div>
-            <br><br>
-            <div class="detail">
-              <center>
-                <h3 class="detail_text">Python</h3>
-                <h4 style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Snake Game</h4>
-                <p>สร้างเกมงูด้วย Python</p>
-              </center>
-                <div id="myPythonCarousel" class="carousel slide slideshow-container" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#myPythonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a target="_blank" href="https://www.youtube.com/watch?v=J2nX7jzDRiQ&ab_channel=ProjectPresenter"><img src="./pics/vidcov.jpg" class="d-block w-100" alt="..."></a>
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Snake Game</h5>
-                            <p>สร้างเกมด้วย Python</p>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button> -->
-                </div>
+            <div class="carousel-item" id="Solar">
+              <a data-bs-toggle="modal" data-bs-target="#solarModal"><img id="solar" src="./pics/SolarRooftop3.png" class="d-block w-100" alt="Solar Rooftop Project"></a>
             </div>
-            <br><br>
-            <div class="detail">
-              <center>
-                <h3 class="detail_text">Arduino</h3>
-                <h4 style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Alarm Clock</h4>
-                <p>นาฬิกาปลุกที่ใช้การเซ็นเซอร์ตรวจจับการหยุดการทำงาน</p>
-              </center>
-                <div id="myHTMLCarousel" class="carousel slide slideshow-container" data-bs-ride="true">
-                    <div class="carousel-indicators">
-                      <button type="button" data-bs-target="#myHTMLCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    </div>
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <a target="_blank" href="https://youtu.be/lJRHrZiEIfg"><img src="./pics/alarm-clock.jpg" class="d-block w-100" alt="Arduino Clap Timer Project"></a>
-                      </div>
-                    </div>
-                    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button> -->
+          </div>
+          <button id="myHTMLCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button id="myHTMLCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myHTMLCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <br><br>
+      <div class="detail" >
+        <center>
+          <h3 class="detail_text">React Native</h3>
+          <div class="d-block d-sm-none">
+            <h4 id="myRANSCarousel-inner_expName" style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Road Risk Areas Notification System</h4>
+            <p id="myRANSCarousel-inner_expDesc">แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง</p>
+          </div>
+        </center>
+        <!-- Modal -->
+        <div class="modal fade" id="ransModal" tabindex="-1" role="dialog" aria-labelledby="ransModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="ransModalLongTitle">Road Risk Areas Notification System</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                โปรเจกต์วิชา Mobile Device Programming ทำแอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง
+                <div class="embed-responsive embed-responsive-16by9">
+                  <center><iframe style="border: 3px dashed rgb(152,206,232); border-radius: 10px;" width="100%" height="300" class="embed-responsive-item" src="https://www.youtube.com/embed/jnU9mMJX8Ws" allowfullscreen></iframe></center>
                 </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
             </div>
+          </div>
+        </div>
+        <div id="myRANSCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myRANSCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myRANSCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+          </div>
+          <div id="myRANSCarousel-inner" class="carousel-inner">
+            <div class="carousel-item active" id="RANS">
+              <a data-bs-toggle="modal" data-bs-target="#ransModal"><img src="./pics/RANS.png" class="d-block w-100" alt="RANS Project"></a>
+              <div class="carousel-caption d-none d-sm-block">
+                  <h5>Road Risk Areas Notification System</h5>
+                  <p>ระบบแจ้งเตือนจุดเสี่ยงบนท้องถนน</p>
+              </div>
+            </div>
+            <div class="carousel-item" id="RANS">
+              <a data-bs-toggle="modal" data-bs-target="#ransModal"><img src="./pics/RANS2.png" class="d-block w-100" alt="RANS Project"></a>
+            </div>
+          </div>
+          <button id="myRANSCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myRANSCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button id="myRANSCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myRANSCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+        </div>
+        <br><br>
+        <div class="detail">
+          <center>
+            <h3 class="detail_text">Java</h3>
+            <div class="d-block d-sm-none">
+              <h4 id="myJavaCarousel-inner_expName" style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Bank Simulation</h4>
+              <p id="myJavaCarousel-inner_expDesc">การจำลองระบบธนาคารด้วยภาษา Java</p>
+            </div>
+          </center>
+          <!-- Modal -->
+          <div class="modal fade" id="bankSimModal" tabindex="-1" role="dialog" aria-labelledby="bankSimModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="bankSimModalLongTitle">Bank Simulation</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  โปรเจกต์วิชา Object-Oriented Programming จำลองระบบธนาคารด้วยภาษา Java
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <center><iframe style="border: 3px dashed rgb(152,206,232); border-radius: 10px;" width="100%" height="300" class="embed-responsive-item" src="https://www.youtube.com/embed/dJTO9O45-QU" allowfullscreen></iframe></center>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="myJavaCarousel" class="carousel slide carousel-dark slideshow-container fadepic" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div id="myJavaCarousel-inner" class="carousel-inner">
+              <div class="carousel-item active">
+                <a data-bs-toggle="modal" data-bs-target="#bankSimModal"><img src="./pics/PloiKongBank.png" class="d-block w-100" alt="Bank Simulation Project"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <h5>Bank Simulation</h5>
+                    <p>จำลองระบบธนาคารด้วยภาษา Java</p>
+                </div>
+              </div>
+            </div>
+            <!-- <button id="myJavaCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myJavaCarousel" data-bs-slide="prev" onclick="prevText(this)">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button id="myJavaCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myJavaCarousel" data-bs-slide="next" onclick="nextText(this)">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button> -->
+          </div>
+        </div>
+        <br><br>
+        <div class="detail">
+          <center>
+            <h3 class="detail_text">Python</h3>
+            <div class="d-block d-sm-none">
+              <h4 id="myPythonCarousel-inner_expName" style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Snake Game</h4>
+              <p id="myPythonCarousel-inner_expDesc">สร้างเกมงูด้วย Python</p>
+            </div>
+          </center>
+          <!-- Modal -->
+          <div class="modal fade" id="snakeGameModal" tabindex="-1" role="dialog" aria-labelledby="snakeGameModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="snakeGameModalLongTitle">Snake Game</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  โปรเจกต์วิชา Problem Solving in Information Teachnology สร้างเกมด้วย Python
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <center><iframe style="border: 3px dashed rgb(152,206,232); border-radius: 10px;" width="100%" height="300" class="embed-responsive-item" src="https://www.youtube.com/embed/J2nX7jzDRiQ" allowfullscreen></iframe></center>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="myPythonCarousel" class="carousel slide slideshow-container" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myPythonCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div id="myPythonCarousel-inner" class="carousel-inner">
+              <div class="carousel-item active">
+                <a data-bs-toggle="modal" data-bs-target="#snakeGameModal"><img src="./pics/vidcov.jpg" class="d-block w-100" alt="Snake Game Project"></a>
+                <div class="carousel-caption d-none d-sm-block">
+                    <h5>Snake Game</h5>
+                    <p>สร้างเกมด้วย Python</p>
+                </div>
+              </div>
+            </div>
+            <!-- <button id="myPythonCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="prev" onclick="prevText(this)">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button id="myPythonCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myPythonCarousel" data-bs-slide="next" onclick="nextText(this)">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button> -->
+          </div>
+        </div>
+        <br><br>
+        <div class="detail">
+          <center>
+            <h3 class="detail_text">Arduino</h3>
+            <div class="d-block d-sm-none">
+              <h4 id="myArduinoCarousel-inner_expName" style="-webkit-text-stroke: .2px Gold;text-stroke: .2px Gold;">Alarm Clock</h4>
+              <p id="myArduinoCarousel-inner_expDesc">นาฬิกาปลุกที่ใช้การเซ็นเซอร์ตรวจจับการหยุดการทำงาน</p>
+            </div>
+          </center>
+          <!-- Modal -->
+          <div class="modal fade" id="arduinoModal" tabindex="-1" role="dialog" aria-labelledby="arduinoModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="arduinoModalLongTitle">Alarm Clock</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  โปรเจกต์วิชา Computer Programming เป็นการทดลองทำนาฬิกาปลุก ซึ่งสามารถตั้งเวลาปัจจุบัน และเวลาปลุกได้ มีจอ LCD แสดงเวลาและ switch สำหรับตั้งเวลา ทำงานโดยจะมีการตั้งเวลาปัจจุบันก่อน และตั้งเวลาปลุก เมื่อถึงเวลาจะมีเสียงเตือนดังขึ้นและเมื่อเซ็นเซอร์ตรวจจับได้ว่ามีอะไรผ่านก็จะทำการหยุดเสียงเตือนนั้น
+                  <center><iframe style="border: 3px dashed rgb(152,206,232); border-radius: 10px;" width="100%" height="300" class="embed-responsive-item" src="https://www.youtube.com/embed/lJRHrZiEIfg" title="Alarm_Clock Project" frameborder="5" allowfullscreen></iframe>
+                </div>
+                <div class="modal-footer">
+                  <a href="https://it63070160.github.io/Alarm-Clock/" target="_blank"><button type="button" class="btn btn-primary">Go to Proposal</button></a>
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="myArduinoCarousel" class="carousel carousel-dark slide slideshow-container" data-bs-ride="true">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#myArduinoCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            </div>
+            <div id="myArduinoCarousel-inner" class="carousel-inner">
+              <div class="carousel-item active">
+                <a data-bs-toggle="modal" data-bs-target="#arduinoModal"><img src="./pics/alarm-clock.jpg" class="d-block w-100" alt="Arduino Clap Timer Project"></a>
+              </div>
+            </div>
+            <!-- <button id="myArduinoCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myArduinoCarousel" data-bs-slide="prev" onclick="prevText(this)">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button id="myArduinoCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myArduinoCarousel" data-bs-slide="next" onclick="nextText(this)">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button> -->
+          </div>
         </div>
     </div>
-    <footer class="footer" style="margin: 10px;">© 2022 Veerawat Kamolchet. All rights reserved.</footer>
-    <script src="./js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  </div>
+  <footer id="rightsFooter" class="footer" style="text-align: center; margin: 10px;">© 2022 Veerawat Kamolchet. All rights reserved.</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  <script src="./js/script.js"></script>
 </body>
 </html>

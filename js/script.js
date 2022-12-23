@@ -8,7 +8,17 @@ var listText = {
     "detail" : [
       {'slideID': "RANS", 'name':"Road Risk Areas Notification System",'description':"แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง"}
     ]
-  }
+  },
+  "myJavaCarousel-inner": {
+    "detail" : [
+      {'slideID': "bankSim", 'name':"Bank Simulation",'description':"จำลองระบบธนาคารด้วยภาษา Java"}
+    ]
+  },
+  "myPythonCarousel-inner": {
+    "detail" : [
+      {'slideID': "snakeGame", 'name':"Snake Game",'description':"สร้างเกมด้วย Python"}
+    ]
+  },
 }
 
 function nextText(info){

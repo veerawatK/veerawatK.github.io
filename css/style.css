@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
 body,
 html {
     margin: 0;
@@ -19,8 +20,17 @@ a:hover{
 .topic {
     color: #fff;
     font-weight: 900;
-    margin: 30;
+    text-shadow: 2px 2px #DAA520; /*#f57474*/
+    margin-top: 20px;
     line-height: 1em;
+}
+
+.expName {
+    text-shadow: 2px 1px #f57474;
+}
+
+.expDescription {
+    font-family: 'Mitr', sans-serif;
 }
 
 .detail_header {
@@ -33,6 +43,7 @@ a:hover{
 
 .detail_text {
     color: #fff;
+    text-shadow: 2px 2px #4a47f0;
 }
 
 .mySlides {display: none}

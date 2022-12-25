@@ -4,7 +4,7 @@ var listText = {
       {'slideID': "Solar", 'name' : "Solar Rooftop Landing Page", 'description':"โปรเจกต์วิชา Multimedia Technology ทำร่วมกับ Greenpeace Thailand"}
     ]
   },
-  "myRANSCarousel-inner": {
+  "myReactCarousel-inner": {
     "detail" : [
       {'slideID': "RANS", 'name':"Road Risk Areas Notification System",'description':"แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง"}
     ]
@@ -37,6 +37,26 @@ function prevText(info){
   })
   document.querySelector('#'+info.parentID+'_expName').innerHTML = detailFilter[0].name
   document.querySelector('#'+info.parentID+'_expDesc').innerHTML = detailFilter[0].description
+}
+
+var navBtn = document.getElementsByClassName('nav-btn')
+var detailText = document.getElementsByClassName("detail_text")
+
+window.onscroll = function(){
+  for(var i=0; i<navBtn.length; i++){
+    if(window.pageYOffset >= detailText[i].offsetTop-150){
+      for(var j=0; j<navBtn.length; j++){
+        if(navBtn[j].classList.contains("active")){
+          navBtn[j].classList.remove("active")
+        }
+      }
+      navBtn[i].classList.add("active")
+    }
+  }
+}
+
+function navToCarousel(to){
+  window.scrollTo(0, document.getElementsByClassName('detail_text')[to].offsetTop)
 }
 
 const myCarousel = document.getElementsByClassName('carousel')

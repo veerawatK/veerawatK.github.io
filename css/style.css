@@ -13,7 +13,7 @@ html {
     background: linear-gradient(180deg, rgba(152,206,232,1) 0%, rgba(77,197,232,1) 4%, rgba(26,114,200,1) 95%, rgba(51,155,222,1) 100%);
 }
 
-a:hover{
+a:hover {
     cursor: pointer;
 }
 
@@ -46,59 +46,60 @@ a:hover{
     text-shadow: 2px 2px #4a47f0;
 }
 
-.mySlides {display: none}
-
-/* Slideshow container */
-.slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-    border: 5px solid black;
-    border-radius: 5px;
-  }
-  
-/* Fading animation */
-.fadepic {
-    animation-name: fadepic;
-    animation-duration: 1.5s;
+.nav-container {
+    position: fixed;
 }
 
-@keyframes fadepic {
-    0% {opacity: .4}
-    100% {opacity: 1}
+#navText {
+    width: 100px;
+    margin-top: -12px;
+    display: none;
+    position: absolute;
+}
+#navTextBG {
+    width: 0px;
+    margin-top: -12px;
+    height: 24px;
+    display: none;
+    position: absolute;
+}
+.nav-btn {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: transparent;
+}
+.nav-btn.active, .nav-btn:hover {
+    background-color: white;
+}
+.nav-btn:hover #navTextBG {
+    background-color: white;
+    display: block;
+    animation: navBtnAnim .3s linear forwards;
+}
+.nav-btn:hover #navText {
+    display: block;
+    animation: fadeOpacity .5s linear forwards;
 }
 
 
-.fade-in-right {
-    animation: fade-in-right 1.2s forwards;
-}
-
-.fade-in-left {
-    animation: fade-in-left 1.2s forwards;
-}
-
-@keyframes fade-in-right {
-    0% {
+@keyframes navBtnAnim {
+    0%{
+        width: 0;
         opacity: 0;
-        filter: alpha(opacity=0);
-        transform: translateX(2000px)
     }
-    100% {
+    100%{
+        width: 100px;
         opacity: 1;
-        filter: alpha(opacity=100);
-        transform: translateX(0px)
     }
 }
-
-@keyframes fade-in-left {
-    0% {
-        opacity: 0;
-        filter: alpha(opacity=0);
-        transform: translateX(-50px)
-    }
-    100% {
-        opacity: 1;
-        filter: alpha(opacity=100);
-        transform: translateX(0px)
-    }
+@keyframes fadeOpacity {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }

@@ -9,6 +9,8 @@
     <title>Veerawat's Portfolio</title>
 </head>
 <body>
+  <div class="position-fixed top-50 ms-3 d-none d-xl-block" id="nav-container">
+  </div>
   <div class="container">
     <div class="topic">
       <h1 class="topic fade-in-left">Portfolio <p style="opacity: 0.5; font-size: 1rem;">(can click on the picture for more detail)</p></h1>
@@ -77,8 +79,8 @@
         <center>
           <h3 class="detail_text">React Native</h3>
           <div class="d-block d-sm-none">
-            <h4 id="myRANSCarousel-inner_expName" class="expName">Road Risk Areas Notification System</h4>
-            <p id="myRANSCarousel-inner_expDesc" class="expDescription">แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง</p>
+            <h4 id="myReactCarousel-inner_expName" class="expName">Road Risk Areas Notification System</h4>
+            <p id="myReactCarousel-inner_expDesc" class="expDescription">แอปพลิเคชันทางโทรศัพท์สำหรับแจ้งเตือนจุดเสี่ยงบนท้องถนนเมื่อผู้ใช้เข้าใกล้จุดเสี่ยง</p>
           </div>
         </center>
         <!-- Modal -->
@@ -101,12 +103,12 @@
             </div>
           </div>
         </div>
-        <div id="myRANSCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="carousel">
+        <div id="myReactCarousel" class="carousel slide slideshow-container fadepic" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#myRANSCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#myRANSCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myReactCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myReactCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
           </div>
-          <div id="myRANSCarousel-inner" class="carousel-inner">
+          <div id="myReactCarousel-inner" class="carousel-inner">
             <div class="carousel-item active" id="RANS">
               <a data-bs-toggle="modal" data-bs-target="#ransModal"><img src="./pics/RANS.png" class="d-block w-100" alt="RANS Project"></a>
               <div class="carousel-caption d-none d-sm-block">
@@ -118,11 +120,11 @@
               <a data-bs-toggle="modal" data-bs-target="#ransModal"><img src="./pics/RANS2.png" class="d-block w-100" alt="RANS Project"></a>
             </div>
           </div>
-          <button id="myRANSCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myRANSCarousel" data-bs-slide="prev">
+          <button id="myReactCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myReactCarousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button id="myRANSCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myRANSCarousel" data-bs-slide="next">
+          <button id="myReactCarousel-inner" class="carousel-control-next" type="button" data-bs-target="#myReactCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -292,5 +294,36 @@
   <footer id="rightsFooter" class="footer" style="text-align: center; margin: 10px;">© 2022 Veerawat Kamolchet. All rights reserved.</footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   <script src="./js/script.js"></script>
+  <script>
+    (function() {
+        var detail = document.getElementsByClassName("detail")
+        var carousel = document.getElementsByClassName("carousel")
+        for(let i=0;i<detail.length;i++){
+            var navContainer = document.getElementById("nav-container")
+            var navBtnContainer = document.createElement('div')
+            var button = document.createElement('button')
+            var navTextBG = document.createElement('div')
+            var navTextTag = document.createElement('p')
+            if(carousel[i].id.slice(carousel[i].id.indexOf("my")+2, carousel[i].id.indexOf("Carousel")) == "React"){
+              var navText = document.createTextNode(carousel[i].id.slice(carousel[i].id.indexOf("my")+2, carousel[i].id.indexOf("Carousel"))+" Native")
+            }else{
+              var navText = document.createTextNode(carousel[i].id.slice(carousel[i].id.indexOf("my")+2, carousel[i].id.indexOf("Carousel")))
+            }
+            navBtnContainer.classList.add("nav-btn-container")
+            navTextBG.id = "navTextBG"
+            navTextTag.id = "navText"
+            navTextTag.appendChild(navText)
+            button.classList.add("nav-btn")
+            if(i==0){
+                button.classList.add("active")
+            }
+            button.appendChild(navTextBG)
+            button.appendChild(navTextTag)
+            button.onclick = function() { navToCarousel(i) };
+            navBtnContainer.appendChild(button)
+            navContainer.appendChild(navBtnContainer)
+        }
+    })();
+  </script>
 </body>
 </html>

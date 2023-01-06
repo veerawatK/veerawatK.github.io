@@ -13,6 +13,14 @@ html {
     background: linear-gradient(180deg, rgba(152,206,232,1) 0%, rgba(77,197,232,1) 4%, rgba(26,114,200,1) 95%, rgba(51,155,222,1) 100%);
 }
 
+.bright {
+    color: white !important;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+}
+
 a:hover {
     cursor: pointer;
 }

@@ -11,7 +11,8 @@ var listText = {
   },
   "myJavaCarousel-inner": {
     "detail" : [
-      {'slideID': "bankSim", 'name':"Bank Simulation",'description':"จำลองระบบธนาคารด้วยภาษา Java"}
+      {'slideID': "bankSim", 'name':"Bank Simulation",'description':"จำลองระบบธนาคารด้วยภาษา Java"},
+      {'slideID': "bookStore", 'name':"Bookstore Simulation",'description':"จำลองระบบซื้อขายหนังสือออนไลน์ด้วยภาษา Java"}
     ]
   },
   "myPythonCarousel-inner": {

@@ -139,7 +139,7 @@
             <p id="myJavaCarousel-inner_expDesc" class="expDescription">การจำลองระบบธนาคารด้วยภาษา Java</p>
           </div>
         </center>
-        <!-- Modal -->
+        <!-- Bank Simulation Modal -->
         <div class="modal fade" id="bankSimModal" tabindex="-1" role="dialog" aria-labelledby="bankSimModalTitle" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
@@ -159,10 +159,33 @@
             </div>
           </div>
         </div>
+        <!-- Bookstore Simulation Modal -->
+        <div class="modal fade" id="bookStoreModal" tabindex="-1" role="dialog" aria-labelledby="bookStoreModalTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="bookStoreModalLongTitle">Bookstore Simulation</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                โปรเจกต์วิชา Service-Oriented Programming จำลองระบบซื้อขายหนังสือออนไลน์ด้วยภาษา Java และใช้ Vue เป็น Front-end
+                <div class="embed-responsive embed-responsive-16by9">
+                  <center><iframe style="border: 3px dashed rgb(152,206,232); border-radius: 10px;" width="100%" height="300" class="embed-responsive-item" src="https://www.youtube.com/embed/d0UQs45Jp3A" allowfullscreen></iframe></center>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div id="myJavaCarousel" class="carousel slide carousel-dark slideshow-container fadepic" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
             <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="1" aria-current="true" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="2" aria-current="true" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="3" aria-current="true" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myJavaCarousel" data-bs-slide-to="4" aria-current="true" aria-label="Slide 5"></button>
           </div>
           <div id="myJavaCarousel-inner" class="carousel-inner">
             <div class="carousel-item active" id="bankSim">
@@ -174,6 +197,19 @@
             </div>
             <div class="carousel-item" id="bankSim">
               <a data-bs-toggle="modal" data-bs-target="#bankSimModal"><img src="./pics/PloiKongBank2.png" class="d-block w-100" alt="Bank Simulation Project"></a>
+            </div>
+            <div class="carousel-item" id="bookStore">
+              <a data-bs-toggle="modal" data-bs-target="#bookStoreModal"><img src="./pics/PloiKongBookStore.png" class="d-block w-100" alt="Bookstore Simulation Project"></a>
+              <div class="carousel-caption d-none d-sm-block bright">
+                  <h5>Bookstore Simulation</h5>
+                  <p>จำลองระบบซื้อขายหนังสือออนไลน์ด้วยภาษา Java</p>
+              </div>
+            </div>
+            <div class="carousel-item" id="bookStore">
+              <a data-bs-toggle="modal" data-bs-target="#bookStoreModal"><img src="./pics/PloiKongBookStore2.png" class="d-block w-100" alt="Bookstore Simulation Project"></a>
+            </div>
+            <div class="carousel-item" id="bookStore">
+              <a data-bs-toggle="modal" data-bs-target="#bookStoreModal"><img src="./pics/PloiKongBookStore3.png" class="d-block w-100" alt="Bookstore Simulation Project"></a>
             </div>
           </div>
           <button id="myJavaCarousel-inner" class="carousel-control-prev" type="button" data-bs-target="#myJavaCarousel" data-bs-slide="prev">

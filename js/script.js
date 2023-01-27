@@ -41,19 +41,34 @@ function prevText(info){
 }
 
 var navBtn = document.getElementsByClassName('nav-btn')
+var navTextBG = document.getElementsByClassName("navTextBG")
+var navText = document.getElementsByClassName("navText")
 var detailText = document.getElementsByClassName("detail_text")
+var activeNav;
+var lastActiveNav = 0;
 
 window.onscroll = function(){
+  // if(window.pageYOffset >= 1){
+  //   document.getElementById("top-nav").classList.add("fixed-top")
+  // }else{
+  //   if(document.getElementById("top-nav").classList.contains("fixed-top")){
+  //     document.getElementById("top-nav").classList.remove("fixed-top")
+  //   }
+  // }
   for(var i=0; i<navBtn.length; i++){
-    if(window.pageYOffset >= detailText[i].offsetTop-150){
-      for(var j=0; j<navBtn.length; j++){
-        if(navBtn[j].classList.contains("active")){
-          navBtn[j].classList.remove("active")
-        }
-      }
-      navBtn[i].classList.add("active")
+    if(window.pageYOffset >= detailText[i].offsetTop-200){
+      activeNav = i
+    }else{
+      break;
     }
   }
+  navBtn[lastActiveNav].classList.remove("active")
+  navTextBG[lastActiveNav].classList.remove("open")
+  navText[lastActiveNav].classList.remove("open")
+  navBtn[activeNav].classList.add("active")
+  navTextBG[activeNav].classList.add("open")
+  navText[activeNav].classList.add("open")
+  lastActiveNav = activeNav
 }
 
 function navToCarousel(to){

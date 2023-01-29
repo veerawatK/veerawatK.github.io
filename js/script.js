@@ -44,35 +44,78 @@ var navBtn = document.getElementsByClassName('nav-btn')
 var navTextBG = document.getElementsByClassName("navTextBG")
 var navText = document.getElementsByClassName("navText")
 var detailText = document.getElementsByClassName("detail_text")
-var activeNav;
+var navLink = document.getElementsByClassName("nav-link")
+var activeNav = 1;
 var lastActiveNav = 0;
 
-window.onscroll = function(){
-  // if(window.pageYOffset >= 1){
-  //   document.getElementById("top-nav").classList.add("fixed-top")
-  // }else{
-  //   if(document.getElementById("top-nav").classList.contains("fixed-top")){
-  //     document.getElementById("top-nav").classList.remove("fixed-top")
-  //   }
-  // }
-  for(var i=0; i<navBtn.length; i++){
-    if(window.pageYOffset >= detailText[i].offsetTop-200){
-      activeNav = i
-    }else{
+function navLinkCheck(){
+  for(var i=0; i<navLink.length; i++){
+    if(navLink[i].classList.contains("active")){
+      navLink[i].classList.remove("active")
       break;
     }
   }
-  navBtn[lastActiveNav].classList.remove("active")
-  navTextBG[lastActiveNav].classList.remove("open")
-  navText[lastActiveNav].classList.remove("open")
-  navBtn[activeNav].classList.add("active")
-  navTextBG[activeNav].classList.add("open")
-  navText[activeNav].classList.add("open")
-  lastActiveNav = activeNav
+  if(window.pageYOffset >= detailText[0].offsetTop-200){
+    navLink[1].classList.add("active")
+  }else if(window.pageYOffset >= 0){
+    navLink[0].classList.add("active")
+  }
+}
+
+function returnToTop(){
+  window.scrollTo(0, 0);
+}
+
+function sendEmail(to){
+  var link = "mailto:"+to;
+  window.location.href = link;
+}
+
+var area = ''
+window.onscroll = function(){
+  if(window.pageYOffset >= 1){
+    document.getElementById("top-nav").classList.add("fixed-top")
+  }else{
+    if(document.getElementById("top-nav").classList.contains("fixed-top")){
+      document.getElementById("top-nav").classList.remove("fixed-top")
+    }
+  }
+  navLinkCheck()
+  if(window.pageYOffset >= detailText[0].offsetTop-200){
+    area = 'experience'
+  }
+  else if(window.pageYOffset >= 0){
+    area = 'home'
+  }
+  if(area == 'experience'){
+    for(var i=0; i<navBtn.length-1; i++){
+      if(window.pageYOffset >= detailText[i].offsetTop-200){
+          activeNav = i+1
+      }
+      else{
+        break;
+      }
+    }
+    navBtn[lastActiveNav].classList.remove("active")
+    navTextBG[lastActiveNav].classList.remove("open")
+    navText[lastActiveNav].classList.remove("open")
+    navBtn[activeNav].classList.add("active")
+    navTextBG[activeNav].classList.add("open")
+    navText[activeNav].classList.add("open")
+    lastActiveNav = activeNav
+  }else{
+    navBtn[lastActiveNav].classList.remove("active")
+    navTextBG[lastActiveNav].classList.remove("open")
+    navText[lastActiveNav].classList.remove("open")
+    navBtn[0].classList.add("active")
+    navTextBG[0].classList.add("open")
+    navText[0].classList.add("open")
+    lastActiveNav = 0
+  }
 }
 
 function navToCarousel(to){
-  window.scrollTo(0, document.getElementsByClassName('detail_text')[to].offsetTop)
+  window.scrollTo(0, document.getElementsByClassName('detail_text')[to].offsetTop-200)
 }
 
 const myCarousel = document.getElementsByClassName('carousel')

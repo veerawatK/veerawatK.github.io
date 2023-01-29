@@ -10,48 +10,69 @@
 </head>
 <body>
   <div class="position-fixed top-50 ms-3 d-none d-xl-block" id="nav-container">
+    <div class="nav-btn-container">
+      <button class="nav-btn active" onclick="returnToTop()">
+        <div class="navTextBG"></div>
+        <p class="navText">Home</p>
+      </button>
+
+    </div>
   </div>
-  <!-- <nav id="top-nav" class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #000; box-shadow: 2px 3px 2px #f1f1f1;">
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="contactModalLongTitle">My Contact</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Email: <a href="" target="_blank" title="Email" onclick="sendEmail('veerawatk.work@gmail.com')" style="text-decoration: none;">veerawatk.work@gmail.com</a> (Veerawat Kamolchet)<br>
+          Email: <a href="" target="_blank" title="Email" onclick="sendEmail('63070160@kmitl.ac.th')" style="text-decoration: none;">63070160@kmitl.ac.th</a> (Veerawat Kamolchet)<br>
+          Github: <a href="https://github.com/it63070160" target="_blank" title="Github" style="text-decoration: none;">it63070160</a><br>
+        </div>
+        <div class="modal-footer" style="justify-content: center;">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav id="top-nav" class="navbar navbar-expand-lg bg-body-tertiary" style="background: rgb(1,84,126);
+  background: linear-gradient(330deg, rgba(1,84,126,1) 0%, rgba(1,84,126,1) 95%, rgba(81,198,245,1) 100%); box-shadow: 2px 3px 2px #f1f1f1;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><h1 class="topic">Veerawat's Portfolio <span style="font-size: 1rem;opacity: 0.5;">(can click on the picture for more detail)</span></h1></a>
+      <a class="navbar-brand" onclick="returnToTop()"><h1 class="topic">Veerawat's Portfolio</h1></a>
       <button class="navbar-toggler" style="background-color: #f1f1f1;" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText" style="flex-grow: unset">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" onclick="returnToTop()">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Experience</a>
+            <a class="nav-link" onclick="navToCarousel(0)">Experience</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
           </li>
         </ul>
       </div>
     </div>
-  </nav> -->
+  </nav>
   <div class="container">
-    <!-- <section class="home">
+    <section class="home">
       <div class="homeText">
-        <h1>Hello !</h1><br>
-        <h3>Welcome to my portfolio</h3>
+        <h1>Hi ! I'm Veerawat</h1>
+        <h3>Welcome to my portfolio :)</h3>
+        <span style="font-size: 1rem; opacity: 0.5;">(can click on the experience picture for more detail)</span>
       </div>
-      <div class="profileContainer">
-        <div class="profile">
-          <img src="./pics/profile.jpg"/>
-        </div>
+      <div class="profile">
+        <img src="./pics/profile.jpg" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;"/>
+        <a href="https://github.com/it63070160/Pikachu-Multi-Project" target="_blank" title="Github"><button type="button" class="btn btn-outline-secondary circle-btn"><i class="fa-brands fa-github larger-font"></i></button></a>
       </div>
-    </section> -->
-    <div class="topic">
-      <h1 class="topic fade-in-left">Veerawat's Portfolio <p style="opacity: 0.5; font-size: 1rem;">(can click on the picture for more detail)</p></h1>
-    </div>
+    </section>
     <br>
-    <div class="detail_container">
+    <div class="detail_container" id="experience">
       <div class="detail">
         <center>
           <h3 class="detail_text">HTML / CSS / JavaScript</h3>
@@ -385,9 +406,9 @@
             navTextTag.classList.add("navText")
             navTextTag.appendChild(navText)
             button.classList.add("nav-btn")
-            if(i==0){
-                button.classList.add("active")
-            }
+            // if(i==0){
+            //     button.classList.add("active")
+            // }
             button.appendChild(navTextBG)
             button.appendChild(navTextTag)
             button.onclick = function() { navToCarousel(i) };

@@ -4,7 +4,7 @@
 body,
 html {
     margin: 0;
-    padding: 0;
+    padding: 0 !important;
     font-family: 'Josefin Sans', sans-serif !important;
     box-sizing: border-box;
     max-width: 100%;
@@ -12,7 +12,6 @@ html {
     background: rgb(152,206,232);
     background: linear-gradient(120deg, rgba(152,206,232,1) 0%, rgba(77,197,232,1) 4%, rgba(26,114,200,1) 95%, rgba(51,155,222,1) 100%);
     background-size: cover;
-    /* background-image: url(../pics/background.jpg); */
 }
 
 .bright {
@@ -38,7 +37,7 @@ a:hover {
 .topic {
     color: #fff !important;
     font-weight: 900;
-    text-shadow: 2px 2px #DAA520; /* #0a9e48 */
+    text-shadow: 2px 2px #0a9e48;
     margin-top: 20px;
     line-height: 1em;
     text-decoration: none !important;
@@ -95,24 +94,23 @@ a:hover {
 .home{
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .homeText{
-    
-}
-.profileContainer {
-    display: flex;
-    justify-content: flex-end;
+
 }
 .profile {
-    width: 300px;
-    height: 300px;
+    max-width: 250px;
+    max-height: 250px;
     overflow: hidden;
     border-radius: 50%;
     border: 2px solid white;
 }
 .profile img {
     width: 100%;
-    margin-top: -50px;
+    height: auto;
 }
 
 .larger-font {

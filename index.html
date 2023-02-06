@@ -15,7 +15,6 @@
         <div class="navTextBG"></div>
         <p class="navText">Home</p>
       </button>
-
     </div>
   </div>
   <!-- Contact Modal -->
@@ -68,7 +67,6 @@
       </div>
       <div class="profile">
         <img src="./pics/profile.jpg" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;"/>
-        <a href="https://github.com/it63070160/Pikachu-Multi-Project" target="_blank" title="Github"><button type="button" class="btn btn-outline-secondary circle-btn"><i class="fa-brands fa-github larger-font"></i></button></a>
       </div>
     </section>
     <br>
@@ -86,7 +84,7 @@
           <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="solarModalLongTitle">Solar Rooftop ft. <a style="text-decoration: none; color: green;" href="https://www.facebook.com/greenpeaceseath/">Greenpeace Thailand</a></h5>
+                <h5 class="modal-title" id="solarModalLongTitle">Solar Rooftop x <a style="text-decoration: none; color: green;" href="https://www.facebook.com/greenpeaceseath/">Greenpeace Thailand</a></h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body">
@@ -110,7 +108,7 @@
               <a data-bs-toggle="modal" data-bs-target="#solarModal"><img id="solar" src="./pics/SolarRooftop.png" class="d-block w-100" alt="Solar Rooftop Project"></a>
               <div class="carousel-caption d-none d-sm-block">
                   <h5>Solar Rooftop</h5>
-                  <p>Landing Page Website ft. Greenpeace Thailand</p>
+                  <p>Landing Page Website x Greenpeace Thailand</p>
               </div>
             </div>
             <div class="carousel-item" id="Solar">
@@ -406,9 +404,6 @@
             navTextTag.classList.add("navText")
             navTextTag.appendChild(navText)
             button.classList.add("nav-btn")
-            // if(i==0){
-            //     button.classList.add("active")
-            // }
             button.appendChild(navTextBG)
             button.appendChild(navTextTag)
             button.onclick = function() { navToCarousel(i) };

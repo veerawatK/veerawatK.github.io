@@ -1,7 +1,7 @@
 var listText = {
   "myHTMLCarousel-inner": {
     "detail" : [
-      {'slideID': "Solar", 'name' : "Solar Rooftop Landing Page", 'description':"โปรเจกต์วิชา Multimedia Technology ทำร่วมกับ Greenpeace Thailand"}
+      {'slideID': "Solar", 'name' : "Solar Rooftop Landing Page", 'description':"เว็บไซต์เกี่ยวกับโซลาร์รูฟท็อปในรูปแบบของ Landing Page ทำร่วมกับ Greenpeace Thailand"}
     ]
   },
   "myReactCarousel-inner": {
@@ -17,7 +17,7 @@ var listText = {
   },
   "myPythonCarousel-inner": {
     "detail" : [
-      {'slideID': "snakeGame", 'name':"Snake Game",'description':"สร้างเกมด้วย Python"}
+      {'slideID': "snakeGame", 'name':"Snake Game",'description':"เกมงูที่ถูกสร้างด้วยภาษา Python โดยใช้ Python Library ต่างๆ"}
     ]
   },
 }

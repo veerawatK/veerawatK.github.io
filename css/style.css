@@ -14,6 +14,21 @@ html {
     background-size: cover;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background: rgb(152,206,232);
+    background: linear-gradient(120deg, rgba(152,206,232,1) 0%, rgba(77,197,232,1) 4%, rgba(26,114,200,1) 95%, rgba(51,155,222,1) 100%);
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(1,84,126);
+    height: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #ffffff; 
+}
+
 .bright {
     color: white !important;
 }
@@ -98,8 +113,6 @@ a:hover {
     justify-content: space-between;
     align-items: center;
 }
-.homeText{
-}
 .profile {
     max-width: 250px;
     max-height: 250px;
@@ -110,6 +123,15 @@ a:hover {
 .profile img {
     width: 100%;
     height: auto;
+}
+@media screen and (max-width: 500px) {
+    .profile {
+        max-width: 150px;
+        max-height: 150px;
+        overflow: hidden;
+        border-radius: 50%;
+        border: 2px solid white;
+    }
 }
 
 .larger-font {

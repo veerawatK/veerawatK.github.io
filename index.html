@@ -21,17 +21,13 @@
   <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="contactModalLongTitle">My Contact</h5>
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100" id="contactModalLongTitle">My Contact</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           Email: <a href="" target="_blank" title="Email" onclick="sendEmail('veerawatk.work@gmail.com')" style="text-decoration: none;">veerawatk.work@gmail.com</a> (Veerawat Kamolchet)<br>
-          Email: <a href="" target="_blank" title="Email" onclick="sendEmail('63070160@kmitl.ac.th')" style="text-decoration: none;">63070160@kmitl.ac.th</a> (Veerawat Kamolchet)<br>
           Github: <a href="https://github.com/it63070160" target="_blank" title="Github" style="text-decoration: none;">it63070160</a><br>
-        </div>
-        <div class="modal-footer" style="justify-content: center;">
-          
         </div>
       </div>
     </div>
@@ -66,8 +62,9 @@
         <h3><span style="color: #ffffff; text-shadow: 1px 1px #0a9e48;">Welcome</span> to my portfolio <span style="color: #f57474; text-shadow: 1px 1px #fff;">:)</span></h3>
         <span style="font-size: 1rem; opacity: 0.5;">(can click on the experience picture for more detail)</span>
       </div>
-      <div class="profile">
-        <img src="./pics/profile.jpg" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;"/>
+      <div class="profile" onmouseenter="swapProfile(this)" onmouseleave="swapBack(this)">
+        <img class="profileIMG1" src="./pics/profile.jpg" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;"/>
+        <img class="profileIMG2" src="./pics/profile2.png" data-bs-toggle="modal" data-bs-target="#contactModal" style="cursor: pointer;"/>
       </div>
     </section>
     <br>

@@ -119,10 +119,26 @@ a:hover {
     overflow: hidden;
     border-radius: 50%;
     border: 2px solid white;
+    position: relative;
+}
+.profileRotation {
+    animation: profileRotation 3s ease-in-out forwards;
+}
+.profileRotationBack {
+    animation: profileRotationBack 3s ease-in-out forwards;
+}
+.swapProfile {
+    animation: swapProfile 3s ease-in-out forwards;
+}
+.swapProfileBack {
+    animation: swapProfileBack 3s ease-in-out forwards;
 }
 .profile img {
     width: 100%;
     height: auto;
+}
+.profile .profileIMG1 {
+    position: absolute;
 }
 @media screen and (max-width: 500px) {
     .profile {
@@ -132,6 +148,22 @@ a:hover {
         border-radius: 50%;
         border: 2px solid white;
     }
+}
+@keyframes profileRotation {
+    0%{transform:rotatey(0deg)}
+    100%{transform:rotatey(200deg)}
+}
+@keyframes profileRotationBack {
+    0%{transform:rotatey(200deg)}
+    100%{transform:rotatey(0deg)}
+}
+@keyframes swapProfile {
+    0%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@keyframes swapProfileBack {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
 }
 
 .larger-font {

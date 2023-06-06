@@ -122,16 +122,10 @@ a:hover {
     position: relative;
 }
 .profileRotation {
-    animation: profileRotation 3s ease-in-out forwards;
-}
-.profileRotationBack {
-    animation: profileRotationBack 3s ease-in-out forwards;
+    animation: profileRotation 3s 2 alternate ease-in-out;
 }
 .swapProfile {
-    animation: swapProfile 3s ease-in-out forwards;
-}
-.swapProfileBack {
-    animation: swapProfileBack 3s ease-in-out forwards;
+    animation: swapProfile 3s 2 alternate ease-in-out;
 }
 .profile img {
     width: 100%;
@@ -153,17 +147,9 @@ a:hover {
     0%{transform:rotatey(0deg)}
     100%{transform:rotatey(200deg)}
 }
-@keyframes profileRotationBack {
-    0%{transform:rotatey(200deg)}
-    100%{transform:rotatey(0deg)}
-}
 @keyframes swapProfile {
     0%{opacity: 1;}
     100%{opacity: 0;}
-}
-@keyframes swapProfileBack {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
 }
 
 .larger-font {

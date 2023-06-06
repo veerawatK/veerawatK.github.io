@@ -129,33 +129,11 @@ for(var i=0; i<myCarousel.length; i++){
   })
 }
 
-var triggerProfile = 0
-
 function swapProfile(event){
-  event.classList.add('profileRotation');
-  document.getElementsByClassName("profileIMG1")[0].classList.add('swapProfile');
-  event.addEventListener("animationend", () => {
-    triggerProfile = 1
-  });
-}
-
-function swapBack(event){
-  if(triggerProfile == 1){
+    event.classList.add('profileRotation');
+    document.getElementsByClassName("profileIMG1")[0].classList.add('swapProfile');
+    event.addEventListener("animationend", () => {
       event.classList.remove('profileRotation');
       document.getElementsByClassName("profileIMG1")[0].classList.remove('swapProfile');
-      event.classList.add('profileRotationBack');
-      document.getElementsByClassName("profileIMG1")[0].classList.add('swapProfileBack');
-  }else{
-    setTimeout(() => {
-      event.classList.remove('profileRotation');
-      document.getElementsByClassName("profileIMG1")[0].classList.remove('swapProfile');
-      event.classList.add('profileRotationBack');
-      document.getElementsByClassName("profileIMG1")[0].classList.add('swapProfileBack');
-    }, 3000)
-  }
-  event.addEventListener("animationend", () => {
-    event.classList.remove('profileRotationBack');
-    document.getElementsByClassName("profileIMG1")[0].classList.remove('swapProfileBack');
-    triggerProfile = 0
-  });
+    });
 }
